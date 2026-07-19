@@ -20,6 +20,7 @@ import com.elasticsearch_app.dto.ProductSearchRequest;
 import com.elasticsearch_app.dto.ProductSearchResponse;
 import com.elasticsearch_app.exception.ProductNotFoundException;
 import com.elasticsearch_app.exception.SearchException;
+import com.elasticsearch_app.mapper.ProductMapper;
 import com.elasticsearch_app.model.Product;
 import com.elasticsearch_app.repository.ProductRepository;
 
@@ -37,6 +38,8 @@ public class ProductServiceImpl implements ProductService {
 
     private final ElasticsearchClient elasticsearchClient;
     private final ProductRepository productRepository;
+    private final ProductMapper productMapper;
+
     @Override
     public ProductSearchResponse searchProducts(ProductSearchRequest request) {
         // TODO Auto-generated method stub
@@ -49,8 +52,12 @@ public class ProductServiceImpl implements ProductService {
     }
     @Override
     public ProductResponse indexProduct(ProductRequest request) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'indexProduct'");
+       log.info("Indexing new product with SKU: {}", request.getSku());
+
+       Product productEntity = productMapper.toEntity(request);
+       Product savedProduct = productRepository.save(productEntity);
+
+       return productMapper.toResponse(savedProduct);
     }
     @Override
     public List<ProductResponse> bulkIndexProducts(List<ProductRequest> requests) {

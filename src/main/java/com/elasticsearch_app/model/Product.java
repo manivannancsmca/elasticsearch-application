@@ -89,7 +89,7 @@ public class Product {
     private LocalDateTime updatedAt;
 
     @GeoPointField
-    private GeoLocation warehouseLocation;
+    private WarehouseLocation warehouseLocation;
 
      @Field(type = FieldType.Keyword)
     private List<String> shippingCountries;
@@ -117,7 +117,7 @@ public class Product {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class GeoLocation {
+    public static class WarehouseLocation {
         private Double lat;
         private Double lon;
     }
