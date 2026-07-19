@@ -5,11 +5,14 @@ import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.elasticsearch_app.dto.ProductRequest;
 import com.elasticsearch_app.dto.ProductResponse;
 import com.elasticsearch_app.model.Product;
 import com.elasticsearch_app.model.Product.WarehouseLocation;
 
+@Component
 public class ProductMapper {
 
     public Product toEntity(ProductRequest request) {

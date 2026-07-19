@@ -1,0 +1,354 @@
+### Global Variables
+@baseUrl = http://localhost:8080/api/v1
+@contentType = application/json
+
+### 1. Create Product: Premium Noise-Cancelling Headphones
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "AeroSound Pro X1 Wireless Headphones",
+  "description": "Premium over-ear active noise cancelling headphones with 40-hour high capacity battery life and audiophile-grade high-resolution acoustic performance.",
+  "sku": "AUD-AUDIO-X1-BLK",
+  "category": "Electronics",
+  "subCategory": "Audio",
+  "brand": "AeroSound",
+  "price": 299.99,
+  "originalPrice": 349.99,
+  "stockQuantity": 85,
+  "isActive": true,
+  "rating": 4.8,
+  "reviewCount": 1420,
+  "tags": ["audio", "wireless", "anc", "premium"],
+  "colors": ["Matte Black", "Platinum Silver"],
+  "sizes": ["One Size"],
+  "specifications": {
+    "Battery Life": "40 Hours",
+    "Bluetooth Version": "5.3",
+    "Driver Size": "40mm",
+    "Weight": "250g"
+  },
+  "variants": [
+    { "variantId": "v-x1-blk", "color": "Matte Black", "size": "One Size", "price": 299.99, "stock": 50, "sku": "AUD-AUDIO-X1-BLK" },
+    { "variantId": "v-x1-slv", "color": "Platinum Silver", "size": "One Size", "price": 299.99, "stock": 35, "sku": "AUD-AUDIO-X1-SLV" }
+  ],
+  "warehouseLocation": "40.7128,-74.0060",
+  "shippingCountries": ["US", "CA", "GB"],
+  "salesCount": 4200
+}
+
+### 2. Create Product: Ergonomic Office Chair
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "ErgoFlex Ergonomic Lumbar Support Chair",
+  "description": "High-back mesh design computer workspace desk chair engineered with fully adjustable 3D armrests, responsive dynamic tilt lock mechanisms, and continuous custom lower back pressure contouring.",
+  "sku": "FUR-CHAIR-EF-09",
+  "category": "Furniture",
+  "subCategory": "Office",
+  "brand": "ErgoFlex",
+  "price": 450.00,
+  "originalPrice": 450.00,
+  "stockQuantity": 24,
+  "isActive": true,
+  "rating": 4.6,
+  "reviewCount": 310,
+  "tags": ["office", "ergonomic", "furniture", "home-office"],
+  "colors": ["Charcoal Grey", "Pure Obsidian"],
+  "sizes": ["Standard Adjustable"],
+  "specifications": {
+    "Max Weight Capacity": "300 lbs",
+    "Material": "Premium Polymer Mesh",
+    "Base Type": "Reinforced Aluminum Wheel Frame"
+  },
+  "variants": [
+    { "variantId": "v-ef-grey", "color": "Charcoal Grey", "size": "Standard Adjustable", "price": 450.00, "stock": 14, "sku": "FUR-CHAIR-EF-09-GR" },
+    { "variantId": "v-ef-obs", "color": "Pure Obsidian", "size": "Standard Adjustable", "price": 450.00, "stock": 10, "sku": "FUR-CHAIR-EF-09-OB" }
+  ],
+  "warehouseLocation": "34.0522,-118.2437",
+  "shippingCountries": ["US", "CA"],
+  "salesCount": 840
+}
+
+### 3. Create Product: HydroFlow Stainless Water Bottle
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "HydroFlow Insulated Vacuum Sport Flask",
+  "description": "Double-walled vacuum insulated professional grade stainless steel sports hydration flask keeping target liquids ice cold up to 24 hours.",
+  "sku": "OUT-FLASK-HF-32",
+  "category": "Outdoors",
+  "subCategory": "Fitness Gear",
+  "brand": "HydroFlow",
+  "price": 34.95,
+  "originalPrice": 39.95,
+  "stockQuantity": 500,
+  "isActive": true,
+  "rating": 4.9,
+  "reviewCount": 2890,
+  "tags": ["eco-friendly", "insulated", "travel", "fitness"],
+  "colors": ["Ocean Blue", "Forest Green", "Blaze Orange"],
+  "sizes": ["32oz", "40oz"],
+  "specifications": {
+    "Material": "18/8 Pro-Grade Stainless Steel",
+    "Insulation Runtime": "24h Cold / 12h Hot",
+    "BPA Free": "Yes"
+  },
+  "variants": [
+    { "variantId": "v-hf-32-blue", "color": "Ocean Blue", "size": "32oz", "price": 34.95, "stock": 200, "sku": "OUT-FLASK-HF-32-BL" },
+    { "variantId": "v-hf-40-green", "color": "Forest Green", "size": "40oz", "price": 39.95, "stock": 150, "sku": "OUT-FLASK-HF-40-GR" }
+  ],
+  "warehouseLocation": "47.6062,-122.3321",
+  "shippingCountries": ["US", "CA", "MX", "DE", "FR"],
+  "salesCount": 12450
+}
+
+### 4. Create Product: HyperGlance Smart Watch
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "HyperGlance Smartwatch Series v4",
+  "description": "Next-generation health tracker wearables deploying advanced optical continuous blood oxygen monitoring metrics, sleep diagnostic frameworks, and standalone high precision multi-band GPS routing modules.",
+  "sku": "WLT-WATCH-HG4-AL",
+  "category": "Electronics",
+  "subCategory": "Wearables",
+  "brand": "HyperGlance",
+  "price": 249.00,
+  "originalPrice": 299.00,
+  "stockQuantity": 110,
+  "isActive": true,
+  "rating": 4.4,
+  "reviewCount": 980,
+  "tags": ["wearables", "smartwatch", "fitness", "gadget"],
+  "colors": ["Midnight Aluminum", "Rose Gold"],
+  "sizes": ["40mm", "44mm"],
+  "specifications": {
+    "Water Resistance": "WR50 - 50 Meters",
+    "Display": "Always-On Retina OLED",
+    "OS Compatibility": "iOS & Android"
+  },
+  "variants": [
+    { "variantId": "v-hg4-40-mid", "color": "Midnight Aluminum", "size": "40mm", "price": 249.00, "stock": 60, "sku": "WLT-WATCH-HG4-40-MN" },
+    { "variantId": "v-hg4-44-rose", "color": "Rose Gold", "size": "44mm", "price": 279.00, "stock": 50, "sku": "WLT-WATCH-HG4-44-RG" }
+  ],
+  "warehouseLocation": "37.7749,-122.4194",
+  "shippingCountries": ["US", "CA", "GB", "AU", "JP"],
+  "salesCount": 5100
+}
+
+### 5. Create Product: Organic Fair-Trade Coffee Beans
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "TerraRoast Ethiopian Yirgacheffe Single-Origin Whole Beans",
+  "description": "Exquisite, responsibly sourced whole organic coffee beans carefully small-batch micro-roasted presenting signature flavor notes of crisp bergamot zest and sweet jasmine undertones.",
+  "sku": "FDB-COF-TERRA-01",
+  "category": "Food & Beverage",
+  "subCategory": "Pantry",
+  "brand": "TerraRoast",
+  "price": 18.50,
+  "originalPrice": 18.50,
+  "stockQuantity": 350,
+  "isActive": true,
+  "rating": 4.9,
+  "reviewCount": 560,
+  "tags": ["organic", "coffee", "fair-trade", "single-origin"],
+  "colors": ["Standard Natural Brown"],
+  "sizes": ["12oz Bag"],
+  "specifications": {
+    "Roast Profile": "Light-Medium",
+    "Processing Style": "Washed",
+    "Elevation Variant": "1,900 - 2,200 Meters"
+  },
+  "variants": [
+    { "variantId": "v-tr-beans-12", "color": "Standard Natural Brown", "size": "12oz Bag", "price": 18.50, "stock": 350, "sku": "FDB-COF-TERRA-01-12" }
+  ],
+  "warehouseLocation": "41.8781,-87.6298",
+  "shippingCountries": ["US", "CA"],
+  "salesCount": 3890
+}
+
+### 6. Create Product: Pro Running Shoes
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "StrataPace Nitro-Foam Elite Running Shoes",
+  "description": "High performance technical carbon-plated marathon engineering using gas-infused highly responsive foam energy response matrices tailored for explosive acceleration properties.",
+  "sku": "APP-SHOE-SPN-M9",
+  "category": "Apparel",
+  "subCategory": "Footwear",
+  "brand": "StrataPace",
+  "price": 160.00,
+  "originalPrice": 180.00,
+  "stockQuantity": 0,
+  "isActive": true,
+  "rating": 4.5,
+  "reviewCount": 190,
+  "tags": ["running", "footwear", "sports", "marathon"],
+  "colors": ["Neon Sulfur Yellow", "Cobalt Horizon Blue"],
+  "sizes": ["9", "10", "11"],
+  "specifications": {
+    "Midsole Cushion Drop": "8mm",
+    "Plate Integration": "Full-Length Curved Carbon Fiber",
+    "Weight Per Shoe": "7.2 oz"
+  },
+  "variants": [
+    { "variantId": "v-spn-9-neon", "color": "Neon Sulfur Yellow", "size": "9", "price": 160.00, "stock": 0, "sku": "APP-SHOE-SPN-M9-NE" }
+  ],
+  "warehouseLocation": "29.7604,-95.3698",
+  "shippingCountries": ["US", "CA", "MX", "BR"],
+  "salesCount": 1100
+}
+
+### 7. Create Product: Cast Iron Skillet Set
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "IronClad Pre-Seasoned Heavy Duty Cast Iron Skillet Set",
+  "description": "Essential triple-vessel premium kitchen system offering 8, 10, and 12-inch heavy-gauge pre-seasoned naturally non-stick culinary skillets prepared for excellent high temperature distribution.",
+  "sku": "KIT-COOK-IC-SET3",
+  "category": "Home & Kitchen",
+  "subCategory": "Cookware",
+  "brand": "IronClad",
+  "price": 74.99,
+  "originalPrice": 89.99,
+  "stockQuantity": 45,
+  "isActive": true,
+  "rating": 4.7,
+  "reviewCount": 4210,
+  "tags": ["kitchen", "cookware", "cast-iron", "chef-grade"],
+  "colors": ["Classic Iron Black"],
+  "sizes": ["3-Piece Combo Pack"],
+  "specifications": {
+    "Factory Coating Type": "100% Organic Kosher Flaxseed Oil",
+    "Heat Adaptability": "Induction, Gas, Electric, Campfire Open Flame",
+    "Country of Production Origin": "USA"
+  },
+  "variants": [
+    { "variantId": "v-ic-combo", "color": "Classic Iron Black", "size": "3-Piece Combo Pack", "price": 74.99, "stock": 45, "sku": "KIT-COOK-IC-SET3-BLK" }
+  ],
+  "warehouseLocation": "39.9526,-75.1652",
+  "shippingCountries": ["US", "CA"],
+  "salesCount": 9400
+}
+
+### 8. Create Product: Smart LED Light Bulbs
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "LumiCon RGBWW Smart Home LED Ambient Bulb Multipack",
+  "description": "Direct Wi-Fi connected application controllable multi-color LED illumination clusters completely compatible with mainstream cloud smart assistant voice interface integrations.",
+  "sku": "HOM-LIGHT-LC-4PK",
+  "category": "Home & Kitchen",
+  "subCategory": "Smart Home",
+  "brand": "LumiCon",
+  "price": 38.00,
+  "originalPrice": 45.00,
+  "stockQuantity": 620,
+  "isActive": true,
+  "rating": 4.3,
+  "reviewCount": 1740,
+  "tags": ["smart-home", "lighting", "led", "iot"],
+  "colors": ["Full Spectrum Dynamic RGB"],
+  "sizes": ["A19 Standard E26 Screw Base"],
+  "specifications": {
+    "Total Light Output Power": "800 Lumens (60W Replacement Equivalent)",
+    "Protocol Stack Requirement": "Wi-Fi 2.4GHz Only",
+    "Longevity Matrix Rating": "25,000 Operational System Hours"
+  },
+  "variants": [
+    { "variantId": "v-lc-4pk", "color": "Full Spectrum Dynamic RGB", "size": "A19 Standard E26 Screw Base", "price": 38.00, "stock": 620, "sku": "HOM-LIGHT-LC-4PK-E26" }
+  ],
+  "warehouseLocation": "25.7617,-80.1918",
+  "shippingCountries": ["US", "CA", "GB", "EU"],
+  "salesCount": 18200
+}
+
+### 9. Create Product: High-Speed NVMe SSD
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "VeloDrive Quantum M.2 PCIe Gen5 NVMe SSD 2TB",
+  "description": "Blazing fast computing system storage drive hitting sequence benchmark matrix performance up to 14,000 MB/s reads using integrated deep aluminum passive multi-finned thermal block sinks.",
+  "sku": "CMP-SSD-VDQ5-2TB",
+  "category": "Electronics",
+  "subCategory": "Components",
+  "brand": "VeloDrive",
+  "price": 189.99,
+  "originalPrice": 219.99,
+  "stockQuantity": 15,
+  "isActive": false,
+  "rating": 4.2,
+  "reviewCount": 85,
+  "tags": ["pc-building", "storage", "nvme", "pcie-gen5"],
+  "colors": ["Gunmetal Anodized Grey"],
+  "sizes": ["1TB", "2TB"],
+  "specifications": {
+    "Sequential Read Pipeline Maximum": "14,000 MB/s",
+    "Form Factor Profile": "M.2 2280",
+    "NAND Cluster Type": "3D TLC Technology"
+  },
+  "variants": [
+    { "variantId": "v-vdq5-2tb", "color": "Gunmetal Anodized Grey", "size": "2TB", "price": 189.99, "stock": 15, "sku": "CMP-SSD-VDQ5-2TB" }
+  ],
+  "warehouseLocation": "32.7767,-96.7970",
+  "shippingCountries": ["US", "CA", "DE", "JP", "KR"],
+  "salesCount": 340
+}
+
+### 10. Create Product: Plant-Based Protein Powder
+POST {{baseUrl}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "BioNutra Organic Clean Plant-Based Organic Protein Mix",
+  "description": "Smooth blend processing natural raw isolated proteins sourced uniformly via pea, organic hemp hearts, and chia micro-seeds creating excellent clean nutrition profiles with complete amino balance sheets.",
+  "sku": "FDB-NUT-BIO-VAN3",
+  "category": "Food & Beverage",
+  "subCategory": "Nutrition",
+  "brand": "BioNutra",
+  "price": 42.50,
+  "originalPrice": 42.50,
+  "stockQuantity": 190,
+  "isActive": true,
+  "rating": 4.6,
+  "reviewCount": 880,
+  "tags": ["vegan", "organic", "supplement", "fitness"],
+  "colors": ["Natural Smooth Cream White"],
+  "sizes": ["2 lb Tub"],
+  "specifications": {
+    "Protein Metric Density Per Serving": "25 Grams",
+    "Flavor Profile Tuning": "Madagascar Bourbon Vanilla Bean",
+    "Sugar Inclusion Weight": "0g Added Sugars"
+  },
+  "variants": [
+    { "variantId": "v-bio-van-2", "color": "Natural Smooth Cream White", "size": "2 lb Tub", "price": 42.50, "stock": 190, "sku": "FDB-NUT-BIO-VAN3-2LB" }
+  ],
+  "warehouseLocation": "39.7392,-104.9903",
+  "shippingCountries": ["US", "CA", "GB", "AU"],
+  "salesCount": 6700
+}
+
+### 11. Complex Multi-Field Compound Search Execution Example
+POST {{baseUrl}}/products/search
+Content-Type: {{contentType}}
+
+{
+  "query": "wireless active headphones noise cancelling",
+  "categories": ["Electronics"],
+  "minPrice": 100.00,
+  "maxPrice": 500.00,
+  "inStock": true,
+  "includeAggregations": true,
+  "highlight": true,
+  "page": 0,
+  "size": 5
+}
