@@ -55,7 +55,7 @@ public class Product {
     @Field(type = FieldType.Integer)
     private Integer stockQuantity;
 
-     @Field(type = FieldType.Boolean)
+    @Field(type = FieldType.Boolean)
     private Boolean inStock;
 
     @Field(type = FieldType.Boolean)
@@ -67,7 +67,7 @@ public class Product {
     @Field(type = FieldType.Integer)
     private Integer reviewCount;
 
-     @Field(type = FieldType.Keyword)
+    @Field(type = FieldType.Keyword)
     private List<String> tags;
 
     @Field(type = FieldType.Keyword)
@@ -79,7 +79,7 @@ public class Product {
     @Field(type = FieldType.Object)
     private Map<String, Object> specifications;
 
-     @Field(type = FieldType.Nested)
+    @Field(type = FieldType.Nested)
     private List<ProductVariant> variants;
 
     @Field(type = FieldType.Date, format = DateFormat.date_time)
@@ -91,13 +91,13 @@ public class Product {
     @GeoPointField
     private WarehouseLocation warehouseLocation;
 
-     @Field(type = FieldType.Keyword)
+    @Field(type = FieldType.Keyword)
     private List<String> shippingCountries;
 
     @Field(type = FieldType.Integer)
     private Integer salesCount;
 
-    @Field(type = FieldType.Text, analyzer = "autocomplete", searchAnalyzer = "standard")
+    @Field(type = FieldType.Text, analyzer = "standard", searchAnalyzer = "standard")
     private String searchSuggest;
 
     @Data
@@ -105,12 +105,18 @@ public class Product {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class ProductVariant {
-        @Field(type = FieldType.Keyword) private String variantId;
-        @Field(type = FieldType.Keyword) private String color;
-        @Field(type = FieldType.Keyword) private String size;
-        @Field(type = FieldType.Double) private BigDecimal price;
-        @Field(type = FieldType.Integer) private Integer stock;
-        @Field(type = FieldType.Keyword) private String sku;
+        @Field(type = FieldType.Keyword)
+        private String variantId;
+        @Field(type = FieldType.Keyword)
+        private String color;
+        @Field(type = FieldType.Keyword)
+        private String size;
+        @Field(type = FieldType.Double)
+        private BigDecimal price;
+        @Field(type = FieldType.Integer)
+        private Integer stock;
+        @Field(type = FieldType.Keyword)
+        private String sku;
     }
 
     @Data
