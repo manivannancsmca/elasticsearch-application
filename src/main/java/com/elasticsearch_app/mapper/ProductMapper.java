@@ -2,6 +2,7 @@ package com.elasticsearch_app.mapper;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Collections;
 import java.util.List;
 
@@ -42,8 +43,8 @@ public class ProductMapper {
                 .shippingCountries(request.getShippingCountries())
                 .salesCount(request.getSalesCount())
                 .searchSuggest(request.getName()) // For autocomplete features
-                .createdAt(LocalDateTime.now())
-                .updatedAt(LocalDateTime.now())
+                .createdAt(LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS))
+                .updatedAt(LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS))
                 .build();
     }
 

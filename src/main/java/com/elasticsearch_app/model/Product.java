@@ -82,10 +82,10 @@ public class Product {
     @Field(type = FieldType.Nested)
     private List<ProductVariant> variants;
 
-    @Field(type = FieldType.Date, format = DateFormat.date_time)
+    @Field(type = FieldType.Date, format = {DateFormat.date_hour_minute_second_millis, DateFormat.strict_date_time})
     private LocalDateTime createdAt;
 
-    @Field(type = FieldType.Date, format = DateFormat.date_time)
+    @Field(type = FieldType.Date, format = {DateFormat.date_hour_minute_second_millis, DateFormat.strict_date_time})
     private LocalDateTime updatedAt;
 
     @GeoPointField

@@ -2,6 +2,9 @@
 @baseUrl = http://localhost:8080/api/v1/products
 @contentType = application/json
 
+### Delete the old index to resolve mapping conflicts
+DELETE http://localhost:29200/products
+
 ### 1. Create Product: Premium Noise-Cancelling Headphones
 POST {{baseUrl}}
 Content-Type: {{contentType}}
@@ -351,4 +354,341 @@ Content-Type: {{contentType}}
   "highlight": true,
   "page": 0,
   "size": 5
+}
+
+### 12. Create Product: Ergonomic Mechanical Keyboard
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "KeyForge Horizon Mechanical Keyboard",
+  "description": "Hot-swappable 75% compact mechanical gaming and professional typing keyboard featuring pre-lubed linear switches, sound-dampening silicone foam gaskets, and south-facing RGB LEDs.",
+  "sku": "CMP-KEYB-KF75-LIN",
+  "category": "Electronics",
+  "subCategory": "Peripherals",
+  "brand": "KeyForge",
+  "price": 149.99,
+  "originalPrice": 169.99,
+  "stockQuantity": 140,
+  "isActive": true,
+  "rating": 4.7,
+  "reviewCount": 640,
+  "tags": ["peripherals", "keyboard", "mechanical", "gaming"],
+  "colors": ["Carbon Grey", "Arctic White"],
+  "sizes": ["75% Layout"],
+  "specifications": {
+    "Switch Type": "Custom Linear (45g Activation)",
+    "Connectivity": "USB-C, 2.4GHz Wireless, Bluetooth 5.1",
+    "Keycap Material": "Double-Shot PBT Cherry Profile"
+  },
+  "variants": [
+    { "variantId": "v-kf75-carb", "color": "Carbon Grey", "size": "75% Layout", "price": 149.99, "stock": 90, "sku": "CMP-KEYB-KF75-CARB" },
+    { "variantId": "v-kf75-arct", "color": "Arctic White", "size": "75% Layout", "price": 154.99, "stock": 50, "sku": "CMP-KEYB-KF75-ARCT" }
+  ],
+  "warehouseLocation": "42.3601,-71.0589",
+  "shippingCountries": ["US", "CA", "GB", "DE"],
+  "salesCount": 1850
+}
+
+### 13. Create Product: Smart Pet Feeder
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "PetPulse Smart Automatic Pet Feeder",
+  "description": "Wi-Fi enabled automatic cat and dog feeder with integrated 1080p HD night-vision camera, two-way audio communication, precise portion control, and anti-clog dispensing engineering.",
+  "sku": "PET-FEED-PP-V2",
+  "category": "Pet Supplies",
+  "subCategory": "Smart Pet Tech",
+  "brand": "PetPulse",
+  "price": 89.95,
+  "originalPrice": 119.95,
+  "stockQuantity": 75,
+  "isActive": true,
+  "rating": 4.4,
+  "reviewCount": 1210,
+  "tags": ["pet-supplies", "smart-home", "iot", "dog-cat"],
+  "colors": ["Classic White", "Piano Black"],
+  "sizes": ["4L Capacity"],
+  "specifications": {
+    "Camera Resolution": "1080p Full HD",
+    "Hopper Capacity": "4 Liters (Dry Food Only)",
+    "App Support": "iOS and Android Native Apps"
+  },
+  "variants": [
+    { "variantId": "v-pp-4l-wht", "color": "Classic White", "size": "4L Capacity", "price": 89.95, "stock": 50, "sku": "PET-FEED-PP-V2-WHT" },
+    { "variantId": "v-pp-4l-blk", "color": "Piano Black", "size": "4L Capacity", "price": 89.95, "stock": 25, "sku": "PET-FEED-PP-V2-BLK" }
+  ],
+  "warehouseLocation": "30.2672,-97.7431",
+  "shippingCountries": ["US", "CA"],
+  "salesCount": 3200
+}
+
+### 14. Create Product: Professional Yoga Mat
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "OhmGrip Pro Eco-Friendly Yoga Mat",
+  "description": "Ultra-dense 6mm biodegradable natural rubber performance yoga cushion presenting standard laser-etched alignment guides and absolute non-slip wet grip stability.",
+  "sku": "OUT-YOGA-OG-6MM",
+  "category": "Outdoors",
+  "subCategory": "Fitness Gear",
+  "brand": "OhmGrip",
+  "price": 65.00,
+  "originalPrice": 65.00,
+  "stockQuantity": 210,
+  "isActive": true,
+  "rating": 4.9,
+  "reviewCount": 850,
+  "tags": ["fitness", "yoga", "eco-friendly", "wellness"],
+  "colors": ["Sage Green", "Deep Amethyst", "Midnight Slate"],
+  "sizes": ["71-Inch Long", "78-Inch Extra Long"],
+  "specifications": {
+    "Material": "100% Biodegradable Natural Tree Rubber",
+    "Thickness": "6mm Cushion Base",
+    "Toxicity Rating": "PVC-Free, Latex-Free"
+  },
+  "variants": [
+    { "variantId": "v-og-sage-71", "color": "Sage Green", "size": "71-Inch Long", "price": 65.00, "stock": 110, "sku": "OUT-YOGA-OG-6S71" },
+    { "variantId": "v-og-slate-78", "color": "Midnight Slate", "size": "78-Inch Extra Long", "price": 75.00, "stock": 100, "sku": "OUT-YOGA-OG-6SL78" }
+  ],
+  "warehouseLocation": "39.7392,-104.9903",
+  "shippingCountries": ["US", "CA", "MX", "GB", "AU"],
+  "salesCount": 4900
+}
+
+### 15. Create Product: Premium 4K Projector
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "CineView Quantum 4K Laser Projector",
+  "description": "Ultra short throw home theater smart laser projector pumping out 2500 ANSI Lumens, HDR10 high dynamic range spectrum, and built-in studio grade Dolby Audio sound arrays.",
+  "sku": "AUD-PROJ-CV4K-LSR",
+  "category": "Electronics",
+  "subCategory": "Video",
+  "brand": "CineView",
+  "price": 1899.00,
+  "originalPrice": 2199.00,
+  "stockQuantity": 8,
+  "isActive": true,
+  "rating": 4.8,
+  "reviewCount": 94,
+  "tags": ["video", "home-theater", "4k", "laser", "premium"],
+  "colors": ["Satin White"],
+  "sizes": ["Standard Space"],
+  "specifications": {
+    "Native Resolution": "3840 x 2160 (4K UHD)",
+    "Light Source Lifespan": "25,000 Hours",
+    "Max Projection Size": "Up to 120 Inches"
+  },
+  "variants": [
+    { "variantId": "v-cv4k-std", "color": "Satin White", "size": "Standard Space", "price": 1899.00, "stock": 8, "sku": "AUD-PROJ-CV4K-LSR" }
+  ],
+  "warehouseLocation": "34.0522,-118.2437",
+  "shippingCountries": ["US", "CA", "GB", "DE", "JP"],
+  "salesCount": 210
+}
+
+### 16. Create Product: Minimalist Leather Wallet
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Vanguard Slim RFID Blocking Leather Wallet",
+  "description": "Handcrafted top-grain vegetable-tanned bifold front pocket card holder wallet featuring advanced military-grade integrated RFID shielding foils.",
+  "sku": "APP-WLT-VAN-SLM",
+  "category": "Apparel",
+  "subCategory": "Accessories",
+  "brand": "Vanguard",
+  "price": 45.00,
+  "originalPrice": 55.00,
+  "stockQuantity": 400,
+  "isActive": true,
+  "rating": 4.6,
+  "reviewCount": 1940,
+  "tags": ["accessories", "wallet", "leather", "minimalist"],
+  "colors": ["Tan Horween", "Obsidian Black", "Cognac Brown"],
+  "sizes": ["Slim Fit"],
+  "specifications": {
+    "Material Class": "100% Full-Grain Cowhide Leather",
+    "Card Capacity Limit": "Up to 8 Cards + Cash Clip",
+    "Shield Frequency Range": "13.56 MHz Standard Protection"
+  },
+  "variants": [
+    { "variantId": "v-van-tan", "color": "Tan Horween", "size": "Slim Fit", "price": 45.00, "stock": 200, "sku": "APP-WLT-VAN-SLM-TN" },
+    { "variantId": "v-van-blk", "color": "Obsidian Black", "size": "Slim Fit", "price": 45.00, "stock": 200, "sku": "APP-WLT-VAN-SLM-BL" }
+  ],
+  "warehouseLocation": "40.7128,-74.0060",
+  "shippingCountries": ["US", "CA", "GB", "FR", "DE"],
+  "salesCount": 11200
+}
+
+### 17. Create Product: Electric Gooseneck Kettle
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "BrewCraft Variable Temp Gooseneck Kettle",
+  "description": "Precision pour-over professional hot water brewing kettle engineered with exact 1-degree temperature variance targets, holding functions, and an ergonomic counter-balanced handle.",
+  "sku": "KIT-KTL-BC-VARIO",
+  "category": "Home & Kitchen",
+  "subCategory": "Coffee & Tea Tools",
+  "brand": "BrewCraft",
+  "price": 120.00,
+  "originalPrice": 120.00,
+  "stockQuantity": 60,
+  "isActive": true,
+  "rating": 4.7,
+  "reviewCount": 1130,
+  "tags": ["kitchen", "coffee", "pour-over", "barista-grade"],
+  "colors": ["Matte Black Wood-Trim", "Polished Chrome"],
+  "sizes": ["0.9 Liter capacity"],
+  "specifications": {
+    "Power Target Specs": "1200W Rapid Heating Element",
+    "Temperature Scope": "135°F to 212°F Base Range",
+    "Internal Basin Alloy": "Food-Grade 304 Stainless Steel"
+  },
+  "variants": [
+    { "variantId": "v-bc-ktl-wdt", "color": "Matte Black Wood-Trim", "size": "0.9 Liter capacity", "price": 120.00, "stock": 40, "sku": "KIT-KTL-BC-VARIO-WD" },
+    { "variantId": "v-bc-ktl-chm", "color": "Polished Chrome", "size": "0.9 Liter capacity", "price": 110.00, "stock": 20, "sku": "KIT-KTL-BC-VARIO-CH" }
+  ],
+  "warehouseLocation": "41.8781,-87.6298",
+  "shippingCountries": ["US", "CA"],
+  "salesCount": 4200
+}
+
+### 18. Create Product: Portable Car Air Compressor
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "DriveSafe Heavy Duty Portable Tire Inflator",
+  "description": "Compact 12V DC vehicle dashboard utility compressor hitting 150 PSI ratings effortlessly with automated custom pressure limit shut-off logic frameworks.",
+  "sku": "AUT-PUMP-DS-150P",
+  "category": "Automotive",
+  "subCategory": "Maintenance Tools",
+  "brand": "DriveSafe",
+  "price": 49.99,
+  "originalPrice": 59.99,
+  "stockQuantity": 180,
+  "isActive": true,
+  "rating": 4.5,
+  "reviewCount": 3100,
+  "tags": ["automotive", "emergency", "tools", "road-trip"],
+  "colors": ["Safety Yellow"],
+  "sizes": ["Compact Kit Bag"],
+  "specifications": {
+    "Maximum Internal Pressure": "150 PSI Peak Level",
+    "Power Draw Allocation": "12V DC Auxiliary Lighter Socket",
+    "Inflation Velocity Metric": "35L/min Air Volume output"
+  },
+  "variants": [
+    { "variantId": "v-ds-pump", "color": "Safety Yellow", "size": "Compact Kit Bag", "price": 49.99, "stock": 180, "sku": "AUT-PUMP-DS-150P" }
+  ],
+  "warehouseLocation": "29.7604,-95.3698",
+  "shippingCountries": ["US", "CA", "MX"],
+  "salesCount": 9400
+}
+
+### 19. Create Product: Studio Condenser Microphone
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "AuraVocal Studio XLR Condenser Microphone",
+  "description": "Large-diaphragm professional gold-sputtered studio microphone built for exceptionally low self-noise processing and pristine high-fidelity podcast tracking loops.",
+  "sku": "AUD-MIC-AV-PRO",
+  "category": "Electronics",
+  "subCategory": "Audio Production",
+  "brand": "AuraVocal",
+  "price": 249.00,
+  "originalPrice": 249.00,
+  "stockQuantity": 0,
+  "isActive": true,
+  "rating": 4.8,
+  "reviewCount": 412,
+  "tags": ["audio", "microphone", "studio", "podcast"],
+  "colors": ["Satin Nickel Finish"],
+  "sizes": ["Standard Mount Frame"],
+  "specifications": {
+    "Polar Pickup Blueprint": "Cardoid True Polar Pattern",
+    "Frequency Scope Curves": "20Hz to 20kHz Uniform Curve",
+    "Connection Port Array": "Standard 3-Pin XLR Male Connection"
+  },
+  "variants": [
+    { "variantId": "v-av-mic-nic", "color": "Satin Nickel Finish", "size": "Standard Mount Frame", "price": 249.00, "stock": 0, "sku": "AUD-MIC-AV-PRO-NIC" }
+  ],
+  "warehouseLocation": "47.6062,-122.3321",
+  "shippingCountries": ["US", "CA", "GB", "DE", "AU"],
+  "salesCount": 1600
+}
+
+### 20. Create Product: Smart Home Security Camera
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "ShieldGuard Outdoor 2K Security Camera System",
+  "description": "Weatherproof IP66 battery-operated wireless standalone yard sentinel deploying structural AI human form classification parameters and integrated mini floodlight arrays.",
+  "sku": "HOM-SEC-SG-2K",
+  "category": "Home & Kitchen",
+  "subCategory": "Smart Home Security",
+  "brand": "ShieldGuard",
+  "price": 129.99,
+  "originalPrice": 149.99,
+  "stockQuantity": 95,
+  "isActive": true,
+  "rating": 4.3,
+  "reviewCount": 1820,
+  "tags": ["smart-home", "security", "camera", "iot", "outdoor"],
+  "colors": ["Chalk White", "Stealth Charcoal Black"],
+  "sizes": ["1-Camera Pack", "2-Camera Bundle"],
+  "specifications": {
+    "Resolution Index Value": "2K Quad HD Streaming Output",
+    "Weatherization Class": "IP66 Certified Waterproof Seals",
+    "Power Cell Lifespan Framework": "6 Months Rechargeable Power Cycle"
+  },
+  "variants": [
+    { "variantId": "v-sg-1cam-wht", "color": "Chalk White", "size": "1-Camera Pack", "price": 129.99, "stock": 60, "sku": "HOM-SEC-SG-2K-W1" },
+    { "variantId": "v-sg-2cam-blk", "color": "Stealth Charcoal Black", "size": "2-Camera Bundle", "price": 229.99, "stock": 35, "sku": "HOM-SEC-SG-2K-B2" }
+  ],
+  "warehouseLocation": "25.7617,-80.1918",
+  "shippingCountries": ["US", "CA", "GB", "EU"],
+  "salesCount": 5400
+}
+
+### 21. Create Product: Carbon Fiber Acoustic Guitar
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "NovaChord Carbon Fiber Travel Acoustic Guitar",
+  "description": "Indestructible composite carbon fiber weather-proof parlor sized acoustic travel acoustic guitar packing excellent internal dynamic resonance sounding soundhole ports.",
+  "sku": "MUS-GTR-NC-TRAV",
+  "category": "Musical Instruments",
+  "subCategory": "Guitars",
+  "brand": "NovaChord",
+  "price": 599.00,
+  "originalPrice": 649.00,
+  "stockQuantity": 12,
+  "isActive": true,
+  "rating": 4.6,
+  "reviewCount": 78,
+  "tags": ["instruments", "guitar", "travel-ready", "carbon-fiber"],
+  "colors": ["Raw Matrix Weave", "Crimson Tint Weave"],
+  "sizes": ["36-Inch Parlor Structural Dimensions"],
+  "specifications": {
+    "Material Compound Base": "AirCarbon Aerospace Structural Shells",
+    "Fretboard Scale Metric": "24-Inch Scale Length Layout",
+    "Humidity/Thermal Safety Limits": "-4°F to 140°F Operating Bounds"
+  },
+  "variants": [
+    { "variantId": "v-nc-gtr-raw", "color": "Raw Matrix Weave", "size": "36-Inch Parlor Structural Dimensions", "price": 599.00, "stock": 8, "sku": "MUS-GTR-NC-TRAV-RW" },
+    { "variantId": "v-nc-gtr-crim", "color": "Crimson Tint Weave", "size": "36-Inch Parlor Structural Dimensions", "price": 629.00, "stock": 4, "sku": "MUS-GTR-NC-TRAV-CR" }
+  ],
+  "warehouseLocation": "32.7767,-96.7970",
+  "shippingCountries": ["US", "CA", "GB", "DE", "JP"],
+  "salesCount": 190
 }
