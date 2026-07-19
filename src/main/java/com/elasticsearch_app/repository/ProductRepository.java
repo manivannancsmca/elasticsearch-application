@@ -6,12 +6,13 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.annotations.Query;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
 import com.elasticsearch_app.model.Product;
 
 @Repository
-public interface ProductRepository {
+public interface ProductRepository extends ElasticsearchRepository<Product, String>  {
 
     List<Product> findByName(String name);
 
