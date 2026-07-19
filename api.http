@@ -692,3 +692,95 @@ Content-Type: {{contentType}}
   "shippingCountries": ["US", "CA", "GB", "DE", "JP"],
   "salesCount": 190
 }
+
+
+### 1. Create Product: Premium Noise-Cancelling Headphones
+GET {{baseUrl}}/PlUgeZ8BikZpGsEDBqpH
+Content-Type: {{contentType}}
+
+###
+PUT {{baseUrl}}/PlUgeZ8BikZpGsEDBqpH
+Content-Type: {{contentType}}
+
+{
+  "name": "TerraRoast Ethiopian Yirgacheffe Single-Origin Whole Beans",
+  "description": "Exquisite, responsibly sourced whole organic coffee beans carefully small-batch micro-roasted presenting signature flavor notes of crisp bergamot zest and sweet jasmine undertones.",
+  "sku": "FDB-COF-TERRA-01",
+  "category": "Food & Beverage",
+  "subCategory": "Pantry",
+  "brand": "TerraRoast",
+  "price": 28.50,
+  "originalPrice": 28.50,
+  "stockQuantity": 300,
+  "isActive": true,
+  "rating": 4.9,
+  "reviewCount": 560,
+  "tags": ["organic", "coffee", "fair-trade", "single-origin"],
+  "colors": ["Standard Natural Brown"],
+  "sizes": ["12oz Bag"],
+  "specifications": {
+    "Roast Profile": "Light-Medium",
+    "Processing Style": "Washed",
+    "Elevation Variant": "1,900 - 2,200 Meters"
+  },
+  "variants": [
+    { "variantId": "v-tr-beans-12", "color": "Standard Natural Brown", "size": "12oz Bag", "price": 18.50, "stock": 350, "sku": "FDB-COF-TERRA-01-12" }
+  ],
+  "warehouseLocation": "41.8781,-87.6298",
+  "shippingCountries": ["US", "CA"],
+  "salesCount": 3890
+}
+
+
+### 22. Get Product Auto-Complete Suggestions: "Key" (Should match Mechanical Keyboard)
+GET {{baseUrl}}/suggest?query=key
+Content-Type: {{contentType}}
+
+### 23. Get Product Auto-Complete Suggestions: "Pet" (Should match Smart Pet Feeder)
+GET {{baseUrl}}/suggest?query=pet
+Content-Type: {{contentType}}
+
+### 24. Get Product Auto-Complete Suggestions: "Yo" (Should match Professional Yoga Mat)
+GET {{baseUrl}}/search/query?ask=dataa
+Content-Type: {{contentType}}
+
+### 25. Get Product Auto-Complete Suggestions: "Cam" (Should match Security Camera)
+GET {{baseUrl}}/search/query?ask=LumiCo
+Content-Type: {{contentType}}
+
+### 26. Get Product Auto-Complete Suggestions: Empty Query (Should return empty or fallback defaults)
+GET {{baseUrl}}/suggest?query=
+Content-Type: {{contentType}}
+
+
+### 27. Trigger Bulk Reindex (Updates your Elasticsearch data matching database entries)
+POST {{baseUrl}}/reindex
+Content-Type: {{contentType}}
+
+
+### 28. Search Products (Full-text & Complex Query Testing)
+POST {{baseUrl}}/search
+Content-Type: {{contentType}}
+
+{
+  "query": "LumiCon",
+  "categories": ["Electronics", "Gadgets"],
+  "brands": ["BrandX"],
+  "inStock": true,
+  "minPrice": 10.0,
+  "maxPrice": 500.0,
+  "page": 0,
+  "size": 5,
+  "sortBy": "price",
+  "sortDirection": "desc",
+  "includeAggregations": true
+}
+
+
+### 29. Get Similar Products (Replace "prod_12345" with an existing database ID)
+GET {{baseUrl}}/prod_12345/similar?size=3
+Content-Type: {{contentType}}
+
+### Find Similar Products (Finds items in the same Category, excluding itself)
+GET {{baseUrl}}/QlUkeZ8BikZpGsEDO6r7/similar?size=3
+Accept: {{contentType}}
