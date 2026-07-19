@@ -1,9 +1,9 @@
 ### Global Variables
-@baseUrl = http://localhost:8080/api/v1
+@baseUrl = http://localhost:8080/api/v1/products
 @contentType = application/json
 
 ### 1. Create Product: Premium Noise-Cancelling Headphones
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -38,7 +38,7 @@ Content-Type: {{contentType}}
 }
 
 ### 2. Create Product: Ergonomic Office Chair
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -72,7 +72,7 @@ Content-Type: {{contentType}}
 }
 
 ### 3. Create Product: HydroFlow Stainless Water Bottle
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -106,7 +106,7 @@ Content-Type: {{contentType}}
 }
 
 ### 4. Create Product: HyperGlance Smart Watch
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -140,7 +140,7 @@ Content-Type: {{contentType}}
 }
 
 ### 5. Create Product: Organic Fair-Trade Coffee Beans
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -173,7 +173,7 @@ Content-Type: {{contentType}}
 }
 
 ### 6. Create Product: Pro Running Shoes
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -206,7 +206,7 @@ Content-Type: {{contentType}}
 }
 
 ### 7. Create Product: Cast Iron Skillet Set
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -239,7 +239,7 @@ Content-Type: {{contentType}}
 }
 
 ### 8. Create Product: Smart LED Light Bulbs
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -272,7 +272,7 @@ Content-Type: {{contentType}}
 }
 
 ### 9. Create Product: High-Speed NVMe SSD
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -305,7 +305,7 @@ Content-Type: {{contentType}}
 }
 
 ### 10. Create Product: Plant-Based Protein Powder
-POST {{baseUrl}}/products
+POST {{baseUrl}}
 Content-Type: {{contentType}}
 
 {
@@ -338,7 +338,7 @@ Content-Type: {{contentType}}
 }
 
 ### 11. Complex Multi-Field Compound Search Execution Example
-POST {{baseUrl}}/products/search
+POST {{baseUrl}}/search
 Content-Type: {{contentType}}
 
 {
