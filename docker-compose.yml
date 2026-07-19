@@ -7,7 +7,7 @@ services:
     container_name: elasticsearch
     restart: unless-stopped
     ports:
-      - "9200:9200"
+      - "9201:9200"
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false # Disabled for easy local development

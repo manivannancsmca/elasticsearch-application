@@ -4,7 +4,7 @@ spring:
 
   # Elasticsearch auto-configuration via Spring Boot
   elasticsearch:
-    uris: http://localhost:9200
+    uris: http://localhost:9201
     username: elastic
     password: changeme
     connection-timeout: 5s
