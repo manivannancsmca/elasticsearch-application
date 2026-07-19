@@ -5,10 +5,8 @@ spring:
   # Elasticsearch auto-configuration via Spring Boot
   elasticsearch:
     uris: http://localhost:29200
-    username: elastic
-    password: changeme
+    socket-timeout: 30s
     connection-timeout: 5s
-    socket-timeout: 10s
 
   # jackson:
   #   serialization:
